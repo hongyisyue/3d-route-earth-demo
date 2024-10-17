@@ -47,7 +47,7 @@ export function Main(params) {
     return (
         <Space
             content={
-                <>
+                <React.Fragment>
                     <Cube
                         pos={[-4, 0.5, 0]}
                         material={myPhotoMap}
@@ -69,7 +69,7 @@ export function Main(params) {
                     <Earth
                         isEnter={isEnter}
                         content={
-                            <>
+                            <React.Fragment>
                                 <MapDot dot={xiamen_xyz}></MapDot>
                                 <TextPole
                                     dot={xiamen_xyz}
@@ -218,11 +218,11 @@ export function Main(params) {
                                     to={stoon_xyz}
                                     frameTime={time}
                                 ></MovingPath>
-                            </>
+                            </React.Fragment>
                         }
                     >
                     </Earth>
-                </>
+                </React.Fragment>
             }>
         </Space>
     );
