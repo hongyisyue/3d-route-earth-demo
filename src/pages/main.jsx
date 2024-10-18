@@ -1,14 +1,10 @@
 import { useLoader, useFrame } from "@react-three/fiber";
 import React, { useState } from "react";
-import MyPhotoMap from "../assets/textures/myPhoto3.jpg";
-import LinkedinMap from "../assets/textures/linkedin.png";
-import IgMap from "../assets/textures/ig.png";
 import { TextureLoader } from "three";
 import { MyLocations, geoToXYZ } from "../data/locations";
 import { MapDot } from "../components/mapDot";
 import { MovingPath } from "../components/movingPath";
 import { TextPole } from "../components/textPole";
-import { Cube } from "../components/cube";
 import { DefaultSettings } from "../data/default";
 import { Earth } from "../components/earth";
 import { Space } from "../components/space";
@@ -17,13 +13,6 @@ export function Main(params) {
 
     const [isEnter, setEnter] = useState(false);
     const [time, setTime] = useState(0.0);
-
-    /** Textures for the cubes */
-    const [myPhotoMap, lkMap, igMap] = useLoader(
-        TextureLoader,
-        [MyPhotoMap, LinkedinMap, IgMap]
-    );
-
     const earth_r = DefaultSettings.earth_r || 1.6;
 
     /** Locations */
