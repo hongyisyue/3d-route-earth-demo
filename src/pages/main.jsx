@@ -1,6 +1,5 @@
-import { useLoader, useFrame } from "@react-three/fiber";
+import { useFrame } from "@react-three/fiber";
 import React, { useState } from "react";
-import { TextureLoader } from "three";
 import { MyLocations, geoToXYZ } from "../data/locations";
 import { MapDot } from "../components/mapDot";
 import { MovingPath } from "../components/movingPath";
